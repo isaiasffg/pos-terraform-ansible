@@ -13,7 +13,7 @@ ingress {
 
   ingress {
     description      = "WinRM Access"
-    from_port        = 5985
+    from_port        = 5986
     to_port          = 5986
     protocol         = "tcp"
     cidr_blocks      = ["0.0.0.0/0"]

@@ -12,7 +12,7 @@
       name: W3Svc
       state: started
 
-      name: Criando arquivo index.html           
-      win_copy:
-        content: "{{ iis_test_message }}"
-        dest: C:\Inetpub\wwwroot\index.html-
+  - name: Criando arquivo index.html           
+    win_copy:
+      content: Teste de Conexão
+      dest: C:\Inetpub\wwwroot\index.html-
