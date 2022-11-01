@@ -1,18 +1,18 @@
-  ---
-  - name: Instalando o IIS no Windows Server 
-    hosts: WinServer2019-IIS
-    tasks:
-    - name: Instalando IIS      
-      win_feature:        
-        name: "Web-Server"        
-        state: present
+---
+- name: Instalando o IIS no Windows Server
+  hosts: WinServer2019-IIS
+  tasks:
+  - name: Instalando IIS      
+    win_feature:        
+      name: "Web-Server"        
+      state: present
 
-    - name: Iniciando IIS
-      win_service:
-        name: W3Svc
-        state: started
+  - name: Iniciando IIS
+    win_service:
+      name: W3Svc
+      state: started
 
-     - name: Criando arquivo index.html           
-       win_copy:
-         content: "{{ iis_test_message }}"
-         dest: C:\Inetpub\wwwroot\index.html
+    - name: Criando arquivo index.html           
+      win_copy:
+        content: "{{ iis_test_message }}"
+        dest: C:\Inetpub\wwwroot\index.html-
