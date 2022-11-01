@@ -9,5 +9,5 @@ resource "aws_instance" "WinServer2019-IIS" {
   tags = {
     Name = "WinServer2019-IIS"
   }
-  vpc_security_group_ids = ["${aws_security_group.acesso-tcp-us-east-2.id}"]
+  vpc_security_group_ids = ["${aws_security_group.acesso-tcp.id}"]
 }
